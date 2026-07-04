@@ -1,0 +1,169 @@
+:root {
+  --primary-color: #224365;
+  --nav-background: #222222;
+  --nav-hover: #4a6c8c;
+  --bg-color: #f0f3f5;
+  --card-bg: #ffffff;
+  --text-color: #333333;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+#course-title {
+  font-family: 'Merriweather', serif;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+#course-title {
+  display: block;
+  text-align: center;
+  font-size: 23px;
+  padding: 20px 15px;
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--nav-background);
+}
+
+nav ul li {
+  flex: 1;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 15px 10px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--nav-hover);
+  color: #d3c338;
+}
+
+main {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  background-color: var(--card-bg);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 26px;
+  padding-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  grid-column: 1 / -1;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+  background-color: var(--primary-color);
+  color: white;
+  margin: 0;
+  padding: 15px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.card-content {
+  padding: 20px;
+  line-height: 1.5;
+}
+
+.profile-img {
+  float: right;
+  margin: 0 0 15px 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 180px;
+  height: auto;
+}
+
+#nation-container {
+  clear: both;
+  margin-top: 40px;
+}
+
+#nation-title {
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+#flag-img {
+  float: left;
+  margin: 0 20px 15px 0;
+  border: 1px solid #ddd;
+  max-width: 180px;
+  height: auto;
+}
+
+.card-content ul {
+  padding-left: 20px;
+}
+
+.card-content ul li {
+  margin-bottom: 12px;
+}
+
+.card-content ul a {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card-content ul a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 25px 20px;
+  margin-top: 10px;
+}
+
+footer p {
+  margin: 8px 0;
+  font-size: 12px;
+}
+
+#lastModified {
+  color: #ffeb3b;
+  font-size: 12px;
+}
