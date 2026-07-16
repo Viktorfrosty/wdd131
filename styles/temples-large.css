@@ -5,7 +5,7 @@
   }
 
   .navigation {
-    display: block;
+    display: flex;
   }
 
   .navigation ul {
