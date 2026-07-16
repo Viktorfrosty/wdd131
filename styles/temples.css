@@ -1,0 +1,128 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #34495e;
+  --accent-color: #e74c3c;
+  --text-color: #333333;
+  --bg-color: #f9f9f9;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Google Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  font-family: var(--font-heading);
+}
+
+header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+#menu-button {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.navigation {
+  display: none;
+  background-color: var(--secondary-color);
+}
+
+.navigation.open {
+  display: block;
+}
+
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation li {
+  width: 100%;
+}
+
+.navigation a {
+  display: block;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-top: 1px solid #455a64;
+}
+
+.navigation a:hover,
+.navigation a.active {
+  background-color: var(--accent-color);
+  font-weight: bold;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+h1 {
+  font-family: var(--font-heading);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+
+.temple-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+figure {
+  border: 1px solid #ddd;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}

@@ -1,0 +1,24 @@
+@media screen and (min-width: 600px) {
+
+  #menu-button {
+    display: none;
+  }
+
+  .navigation {
+    display: block;
+  }
+
+  .navigation ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .navigation a {
+    border-top: none;
+    padding: 1rem 2rem;
+  }
+
+  .temple-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
