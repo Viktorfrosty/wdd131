@@ -64,10 +64,10 @@ main {
   width: 100%;
 }
 
+/* Mobile natural proportions layout (matches full-width height: auto behavior) */
 .hero img {
-  height: 65vh;
-  min-height: 420px;
-  object-fit: cover;
+  height: auto;
+  max-width: 100%;
 }
 
 .hero-cards {
