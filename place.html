@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Barquisimeto, Venezuela place page featuring geographic data, climate information, and weather calculations for the WDD 131 project.">
+  <meta name="author" content="Victor Manuel Malpica Castro">
+  <title>Barquisimeto, Venezuela | Place Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/place.css">
+  <link rel="stylesheet" href="styles/place-large.css" media="screen and (min-width: 900px)">
+  <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+  <header class="page-header">
+    <h1>Barquisimeto, Venezuela</h1>
+  </header>
+
+  <main>
+    <section class="hero">
+      <picture>
+        <source media="(min-width: 900px)" srcset="images/caracas.webp">
+        <source media="(min-width: 600px)" srcset="images/caracas.webp">
+        <img src="images/caracas.webp" alt="Tropical landscape representing Venezuela">
+      </picture>
+
+      <div class="hero-cards">
+        <article class="card data-card" aria-labelledby="data-heading">
+          <h2 id="data-heading">Data</h2>
+          <dl>
+            <div>
+              <dt>Area:</dt>
+              <dd>587,041 sq km</dd>
+            </div>
+            <div>
+              <dt>Population:</dt>
+              <dd>27,691,018</dd>
+            </div>
+            <div>
+              <dt>Capital:</dt>
+              <dd>Caracas</dd>
+            </div>
+            <div>
+              <dt>Languages:</dt>
+              <dd>Spanish</dd>
+            </div>
+            <div>
+              <dt>Currency:</dt>
+              <dd>Venezuelan bolívar</dd>
+            </div>
+            <div>
+              <dt>Time Zone:</dt>
+              <dd>UTC-4</dd>
+            </div>
+            <div>
+              <dt>Calling Code:</dt>
+              <dd>+58</dd>
+            </div>
+            <div>
+              <dt>Internet TLD:</dt>
+              <dd>.ve</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="card weather-card" aria-labelledby="weather-heading">
+          <h2 id="weather-heading">Weather</h2>
+          <!-- Inline SVG with proper viewBox to prevent scaling bugs -->
+          <svg class="weather-icon-mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#3f74c9"
+            aria-hidden="true">
+            <path
+              d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z" />
+          </svg>
+          <dl>
+            <div>
+              <dt>Temperature:</dt>
+              <dd>10 °C</dd>
+            </div>
+            <div>
+              <dt>Conditions:</dt>
+              <dd>Partly Cloudy</dd>
+            </div>
+            <div>
+              <dt>Wind:</dt>
+              <dd>5 km/h</dd>
+            </div>
+            <div>
+              <dt>Wind Chill:</dt>
+              <dd><span id="windchill">Calculating...</span></dd>
+            </div>
+          </dl>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Victor Manuel Malpica Castro · Barquisimeto, Venezuela</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+
+</html>

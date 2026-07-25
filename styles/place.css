@@ -1,0 +1,138 @@
+:root {
+  --primary: #1c3d7a;
+  --secondary: #3f74c9;
+  --surface: #ffffffee;
+  --background: #e8efff;
+  --text: #11203b;
+  --muted: #4f5c76;
+  --border: rgba(0, 0, 0, 0.08);
+  --shadow: 0 16px 40px rgba(28, 61, 122, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  background: var(--background);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1.4rem 1rem;
+  border-bottom: 0.8rem solid var(--secondary);
+}
+
+.page-header h1 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.hero {
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  background: transparent;
+}
+
+.hero picture,
+.hero img {
+  display: block;
+  width: 100%;
+}
+
+.hero img {
+  height: 65vh;
+  min-height: 420px;
+  object-fit: cover;
+}
+
+.hero-cards {
+  display: grid;
+  gap: 1rem;
+  margin: 1rem 0 0;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.card h2 {
+  margin: 0 0 1rem;
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+}
+
+.data-card dl,
+.weather-card dl {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.data-card dt,
+.weather-card dt {
+  font-weight: 700;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.data-card dd,
+.weather-card dd {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.weather-card {
+  display: grid;
+  gap: 0.75rem;
+}
+
+/* Strict mobile SVG icon sizing */
+.weather-icon-mobile {
+  width: 42px;
+  height: 42px;
+  display: block;
+  margin: 0 auto 0.5rem auto;
+}
+
+footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 1.5rem;
+}
+
+footer p {
+  margin: 0.35rem 0;
+  font-size: 0.96rem;
+}
