@@ -64,7 +64,6 @@ main {
   width: 100%;
 }
 
-/* Mobile natural proportions layout (matches full-width height: auto behavior) */
 .hero img {
   height: auto;
   max-width: 100%;
@@ -116,7 +115,6 @@ main {
   gap: 0.75rem;
 }
 
-/* Strict mobile SVG icon sizing */
 .weather-icon-mobile {
   width: 42px;
   height: 42px;
