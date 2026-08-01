@@ -3,16 +3,16 @@
     display: none;
   }
 
-  .navigation {
+  nav {
     display: flex;
   }
 
-  .navigation ul {
+  nav ul {
     flex-direction: row;
     justify-content: center;
   }
 
-  .navigation a {
+  nav a {
     border-top: none;
     padding: 1rem 1.5rem;
   }

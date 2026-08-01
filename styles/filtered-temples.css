@@ -43,23 +43,23 @@ header > div {
   cursor: pointer;
 }
 
-.navigation {
+nav {
   display: none;
   background-color: var(--secondary-color);
 }
 
-.navigation.open {
+nav.open {
   display: flex;
 }
 
-.navigation ul {
+nav ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.navigation a {
+nav a {
   display: block;
   padding: 1rem;
   color: white;
@@ -68,8 +68,8 @@ header > div {
   border-top: 1px solid #455a64;
 }
 
-.navigation a:hover,
-.navigation a.active {
+nav a:hover,
+nav a.active {
   background-color: var(--accent-color);
   font-weight: bold;
 }
