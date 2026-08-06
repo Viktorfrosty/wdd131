@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product review form for WDD 131 assignment.">
+    <meta name="author" content="Victor Manuel Malpica Castro">
+    <title>Product Review Form | WDD 131</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="form.html">Review Form</a></li>
+          <li><a href="review.html">Confirmation</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="form-page">
+      <div class="page-intro">
+        <h1>Share Your Product Review</h1>
+        <p>Help other shoppers by sharing your experience with a product you installed.</p>
+      </div>
+
+      <form action="review.html" method="get" class="review-form">
+        <div class="form-grid">
+          <div class="field-group">
+            <label for="product">Product Name <span class="required-indicator" aria-label="required">*</span></label>
+            <select id="product" name="product" required>
+              <option value="" disabled selected>Select a Product ...</option>
+            </select>
+          </div>
+
+          <fieldset class="field-group rating-group">
+            <legend>Overall Rating <span class="required-indicator" aria-label="required">*</span></legend>
+            <div class="radio-group" role="radiogroup" aria-label="Overall rating">
+              <label class="rating-option" for="rating-1">
+                <input type="radio" id="rating-1" name="rating" value="1" required>
+                <span>1 ★</span>
+              </label>
+              <label class="rating-option" for="rating-2">
+                <input type="radio" id="rating-2" name="rating" value="2">
+                <span>2 ★</span>
+              </label>
+              <label class="rating-option" for="rating-3">
+                <input type="radio" id="rating-3" name="rating" value="3">
+                <span>3 ★</span>
+              </label>
+              <label class="rating-option" for="rating-4">
+                <input type="radio" id="rating-4" name="rating" value="4">
+                <span>4 ★</span>
+              </label>
+              <label class="rating-option" for="rating-5">
+                <input type="radio" id="rating-5" name="rating" value="5">
+                <span>5 ★</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="field-group">
+            <label for="installation-date">Date of Installation <span class="required-indicator" aria-label="required">*</span></label>
+            <input type="date" id="installation-date" name="installation-date" required>
+          </div>
+
+          <fieldset class="field-group checkbox-group">
+            <legend>Useful Features</legend>
+            <div class="checkbox-grid">
+              <label for="feature-durability">
+                <input type="checkbox" id="feature-durability" name="features" value="Durability">
+                Durability
+              </label>
+              <label for="feature-ease">
+                <input type="checkbox" id="feature-ease" name="features" value="Ease of use">
+                Ease of use
+              </label>
+              <label for="feature-design">
+                <input type="checkbox" id="feature-design" name="features" value="Design">
+                Design
+              </label>
+              <label for="feature-performance">
+                <input type="checkbox" id="feature-performance" name="features" value="Performance">
+                Performance
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="field-group">
+            <label for="review">Written Review</label>
+            <textarea id="review" name="review" rows="6" placeholder="Share what you liked or what could be improved..."></textarea>
+          </div>
+
+          <div class="field-group">
+            <label for="user-name">User Name</label>
+            <input type="text" id="user-name" name="user-name" placeholder="Optional">
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <input type="submit" value="Submit Review">
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="currentyear"></span> &#10026; Victor Manuel Malpica Castro &#10026; Venezuela</p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
+</html>

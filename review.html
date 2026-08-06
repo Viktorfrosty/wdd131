@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Review confirmation page for the WDD 131 product review form.">
+    <meta name="author" content="Victor Manuel Malpica Castro">
+    <title>Review Confirmation | WDD 131</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="form.html">Review Form</a></li>
+          <li><a href="review.html">Confirmation</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="review-page">
+      <section class="confirmation-card" aria-live="polite">
+        <p class="eyebrow">Review Received</p>
+        <h1>Thank you for sharing your feedback.</h1>
+        <p>Your product review has been submitted successfully.</p>
+
+        <dl class="summary">
+          <div>
+            <dt>Product</dt>
+            <dd id="confirmation-product">—</dd>
+          </div>
+          <div>
+            <dt>Rating</dt>
+            <dd id="confirmation-rating">—</dd>
+          </div>
+          <div>
+            <dt>Installation Date</dt>
+            <dd id="confirmation-date">—</dd>
+          </div>
+          <div>
+            <dt>Featured Notes</dt>
+            <dd id="confirmation-features">—</dd>
+          </div>
+          <div>
+            <dt>Review</dt>
+            <dd id="confirmation-review">—</dd>
+          </div>
+        </dl>
+
+        <p id="review-count" class="review-count">Reviews completed: 0</p>
+        <a href="form.html" class="back-link">Submit another review</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="currentyear"></span> &#10026; Victor Manuel Malpica Castro &#10026; Venezuela</p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
+</html>
