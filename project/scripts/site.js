@@ -21,7 +21,7 @@ const menuItems = [
     category: 'coffee',
     price: 3.95,
     description: 'Smooth espresso with steamed milk and house-made vanilla syrup.',
-    image: 'images/coffee_drinks.webp',
+    image: 'images/coffee_latte.webp',
   },
   {
     id: 'baguette',
@@ -29,7 +29,7 @@ const menuItems = [
     category: 'bread',
     price: 3.75,
     description: 'A crisp exterior and a soft interior make this a perfect sandwich companion.',
-    image: 'images/bread_selection.webp',
+    image: 'images/baguettes_in_a_basket.webp',
   },
   {
     id: 'morning-bun',
@@ -37,7 +37,7 @@ const menuItems = [
     category: 'pastry',
     price: 4.25,
     description: 'Sweet and spiced with a caramel glaze, ideal for a cozy breakfast treat.',
-    image: 'images/counter-bakery.webp',
+    image: 'images/cinnamon_bun.webp',
   },
   {
     id: 'espresso',
