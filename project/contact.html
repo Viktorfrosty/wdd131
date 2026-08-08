@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +11,6 @@
   <script src="scripts/form.js" defer></script>
   <script src="scripts/getdates.js" defer></script>
 </head>
-
 <body>
   <header class="site-header">
     <div class="top-bar">
@@ -38,23 +36,18 @@
       <form id="contact-form" class="contact-form" action="review.html" method="get">
         <fieldset>
           <legend>Contact Information</legend>
-
           <label for="full-name">Full Name *</label>
           <input type="text" id="full-name" name="full-name" required pattern="^(?=.{2,50}$)[A-Za-zÀ-ÿ\s.'-]+$"
             title="Please enter your full name (2-50 characters, letters and common punctuation only)." placeholder="Jane Doe">
-
           <label for="email">Email Address *</label>
           <input type="email" id="email" name="email" required
             title="Please enter a valid email address (e.g., name@domain.com)." placeholder="jane@example.com">
-
           <label for="phone">Phone Number *</label>
           <input type="tel" id="phone" name="phone" required pattern="^[\d+().\s-]{7,15}$"
             title="Phone number must contain between 7 and 15 digits." placeholder="+1 555-0199">
         </fieldset>
-
         <fieldset>
           <legend>Event Details</legend>
-
           <label for="event-type">Event Type *</label>
           <select id="event-type" name="event-type" required>
             <option value="" disabled selected>Select an event type</option>
@@ -63,7 +56,6 @@
             <option value="family-gathering">Family Gathering</option>
             <option value="custom-request">Custom Request</option>
           </select>
-
           <label for="guest-count">Estimated Guest Count *</label>
           <input type="number" id="guest-count" name="guest-count" min="1" max="9999" required
             title="Please enter a valid guest count (1-9999)." placeholder="25">
@@ -72,7 +64,6 @@
           <textarea id="message" name="message" rows="4"
             placeholder="Any dietary restrictions or preferences..."></textarea>
         </fieldset>
-
         <div class="form-actions">
           <button type="submit" class="btn btn-primary">Submit Request</button>
         </div>
