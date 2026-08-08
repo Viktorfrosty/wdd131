@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Request catering, ask about menu options, or contact The Artisan Bakehouse.">
+  <meta name="author" content="Victor Manuel Malpica Castro">
+  <title>Contact | The Artisan Bakehouse</title>
+  <link rel="stylesheet" href="styles/site.css">
+  <script src="scripts/site.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="top-bar">
+      <a class="logo" href="index.html">The Artisan Bakehouse</a>
+      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+    </div>
+    <nav id="primary-navigation" class="primary-navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="page-intro">
+      <h1>Catering Request & Contact</h1>
+      <p>Submit your catering request, ask about menu customizations, or save your contact preferences for future visits.</p>
+    </section>
+
+    <section class="form-section">
+      <form id="contact-form" class="contact-form" novalidate>
+        <fieldset>
+          <legend>Contact information</legend>
+
+          <label for="full-name">Full name <span aria-hidden="true">*</span></label>
+          <input type="text" id="full-name" name="full-name" required placeholder="Your name">
+
+          <label for="email">Email address <span aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com">
+
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890">
+        </fieldset>
+
+        <fieldset>
+          <legend>Order details</legend>
+
+          <label for="event-type">Event type <span aria-hidden="true">*</span></label>
+          <select id="event-type" name="event-type" required>
+            <option value="" disabled selected>Select an event</option>
+            <option value="morning-meeting">Morning meeting</option>
+            <option value="customer-appreciation">Customer appreciation</option>
+            <option value="family-gathering">Family gathering</option>
+            <option value="custom-request">Custom request</option>
+          </select>
+
+          <label for="guest-count">Guest count</label>
+          <input type="number" id="guest-count" name="guest-count" min="1" placeholder="Number of guests">
+
+          <label for="message">Special requests</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us about dietary needs or delivery preferences."></textarea>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Send request</button>
+        </div>
+      </form>
+
+      <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>&copy; <span id="currentYear"></span> The Artisan Bakehouse & Café</p>
+  </footer>
+</body>
+</html>

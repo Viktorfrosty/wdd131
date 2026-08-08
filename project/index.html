@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Artisan Bakehouse & Café features seasonal pastries, breads, and catering orders for local customers.">
+  <meta name="author" content="Victor Manuel Malpica Castro">
+  <title>The Artisan Bakehouse & Café</title>
+  <link rel="stylesheet" href="styles/site.css">
+  <script src="scripts/site.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="top-bar">
+      <a class="logo" href="index.html">The Artisan Bakehouse</a>
+      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+    </div>
+    <nav id="primary-navigation" class="primary-navigation" aria-label="Main navigation">
+      <a href="index.html" class="active">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Freshly baked every day</p>
+        <h1>Warm bread, handcrafted pastries, and premium coffee</h1>
+        <p>Visit our local café for a friendly morning treat, browse our seasonal bakery menu, and place an easy catering request for your next event.</p>
+        <div class="hero-actions">
+          <a href="menu.html" class="btn btn-primary">Browse the menu</a>
+          <a href="contact.html" class="btn btn-secondary">Request catering</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/counter-bakery.webp" alt="A bakery counter filled with pastries and breads" loading="eager">
+      </div>
+    </section>
+
+    <section class="quick-overview">
+      <div class="overview-card">
+        <h2>Why choose us?</h2>
+        <p>Our bakery focuses on slow-made breads, seasonal pastries, and custom catering that supports local ingredients and welcoming community service.</p>
+      </div>
+      <div class="overview-card">
+        <h2>Daily craft</h2>
+        <p>Each loaf and pastry is shaped by hand, baked fresh every morning, and paired with expertly brewed coffee for a memorable breakfast or lunch stop.</p>
+      </div>
+      <div class="overview-card">
+        <h2>Local favorites</h2>
+        <p>From sourdough to croissants, our menu highlights customer favorites with gluten-friendly options, vegetarian treats, and catering platters for groups.</p>
+      </div>
+    </section>
+
+    <section class="featured-items">
+      <div class="section-heading">
+        <h2>Featured today</h2>
+        <p>Explore the fresh items our pastry chef recommends right now.</p>
+      </div>
+      <div id="featured-items" class="feature-grid"></div>
+    </section>
+
+    <section class="visit-details">
+      <h2>Plan your visit</h2>
+      <div class="visit-grid">
+        <article>
+          <h3>Hours</h3>
+          <p>Monday to Saturday: 7:00 AM &ndash; 6:00 PM</p>
+          <p>Sunday: 8:00 AM &ndash; 3:00 PM</p>
+        </article>
+        <article>
+          <h3>Location</h3>
+          <p>123 Artisan Lane</p>
+          <p>Springfield, USA</p>
+        </article>
+        <article>
+          <h3>Need help?</h3>
+          <p>Call us at <a href="tel:+1234567890">(123) 456-7890</a> or fill out the catering request form.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>&copy; <span id="currentYear"></span> The Artisan Bakehouse & Café</p>
+  </footer>
+</body>
+</html>
