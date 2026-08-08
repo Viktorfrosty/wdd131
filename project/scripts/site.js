@@ -5,7 +5,7 @@ const menuItems = [
     category: 'bread',
     price: 6.5,
     description: 'A crisp, tangy loaf baked fresh each morning using our signature starter.',
-    image: 'images/bread_selection.jpg',
+    image: 'images/bread_selection.webp',
   },
   {
     id: 'almond-croissant',
@@ -13,7 +13,7 @@ const menuItems = [
     category: 'pastry',
     price: 4.75,
     description: 'Flaky pastry filled with almond cream, topped with toasted almonds and powdered sugar.',
-    image: 'images/croissant-spotlight.jpg',
+    image: 'images/croissant-spotlight.webp',
   },
   {
     id: 'latte',
@@ -21,7 +21,7 @@ const menuItems = [
     category: 'coffee',
     price: 3.95,
     description: 'Smooth espresso with steamed milk and house-made vanilla syrup.',
-    image: 'images/coffee_drinks.jpg',
+    image: 'images/coffee_drinks.webp',
   },
   {
     id: 'baguette',
@@ -29,7 +29,7 @@ const menuItems = [
     category: 'bread',
     price: 3.75,
     description: 'A crisp exterior and a soft interior make this a perfect sandwich companion.',
-    image: 'images/bread_selection.jpg',
+    image: 'images/bread_selection.webp',
   },
   {
     id: 'morning-bun',
@@ -45,7 +45,7 @@ const menuItems = [
     category: 'coffee',
     price: 2.95,
     description: 'Rich and bold espresso served in a small cup for an energizing pick-me-up.',
-    image: 'images/coffee_drinks.jpg',
+    image: 'images/coffee_drinks.webp',
   },
 ];
 
@@ -133,52 +133,11 @@ const renderMenu = (filter = 'all') => {
 
 const handleFilterClick = () => {
   const filterButtons = document.querySelectorAll('.filter-button');
-
   filterButtons.forEach((button) => {
     button.addEventListener('click', () => {
-      const filterValue = button.dataset.filter;
-      renderMenu(filterValue);
+      renderMenu(button.dataset.filter);
     });
   });
-};
-
-const handleForm = () => {
-  const form = document.querySelector('#contact-form');
-  if (!form) return;
-
-  const feedback = document.querySelector('#form-feedback');
-
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(form);
-    const name = formData.get('full-name');
-    const email = formData.get('email');
-    const message = formData.get('message');
-
-    if (!name || !email) {
-      feedback.textContent = 'Please fill in the required fields before sending your request.';
-      return;
-    }
-
-    localStorage.setItem('bakery-contact-name', name);
-    localStorage.setItem('bakery-contact-email', email);
-
-    feedback.textContent = `Thank you, ${name}! Your catering request has been received.`;
-    form.reset();
-  });
-};
-
-const restoreContactInfo = () => {
-  const nameInput = document.querySelector('#full-name');
-  const emailInput = document.querySelector('#email');
-  if (!nameInput || !emailInput) return;
-
-  const savedName = localStorage.getItem('bakery-contact-name');
-  const savedEmail = localStorage.getItem('bakery-contact-email');
-
-  if (savedName) nameInput.value = savedName;
-  if (savedEmail) emailInput.value = savedEmail;
 };
 
 const initNavigation = () => {
@@ -190,20 +149,20 @@ const initNavigation = () => {
     const isOpen = navigation.classList.toggle('open');
     menuToggle.setAttribute('aria-expanded', String(isOpen));
   });
-};
 
-const setCurrentYear = () => {
-  const yearEl = document.querySelector('#currentYear');
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && navigation.classList.contains('open')) {
+      navigation.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.focus();
+    }
+  });
 };
 
 window.addEventListener('DOMContentLoaded', () => {
-  setCurrentYear();
   initNavigation();
   renderFeaturedItems();
   renderMenu();
   handleFilterClick();
   updateFavoriteCount();
-  restoreContactInfo();
-  handleForm();
 });

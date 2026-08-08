@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Request confirmation page for The Artisan Bakehouse contact form.">
+  <meta name="author" content="Victor Manuel Malpica Castro">
+  <title>Request Confirmation | The Artisan Bakehouse</title>
+  <link rel="stylesheet" href="styles/site.css">
+  <script src="scripts/site.js" defer></script>
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="top-bar">
+      <a class="logo" href="index.html">The Artisan Bakehouse</a>
+      <button class="menu-toggle" id="menu-toggle" aria-expanded="false"
+        aria-controls="primary-navigation">Menu</button>
+    </div>
+    <nav id="primary-navigation" class="primary-navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main class="review-page">
+    <section class="confirmation-card" aria-live="polite">
+      <p class="eyebrow">Request Received</p>
+      <h1>Thank you for reaching out!</h1>
+      <p>We have received your catering request and will review your details shortly.</p>
+
+      <dl class="summary">
+        <div>
+          <dt>Full Name</dt>
+          <dd id="confirmation-name">—</dd>
+        </div>
+        <div>
+          <dt>Email Address</dt>
+          <dd id="confirmation-email">—</dd>
+        </div>
+        <div>
+          <dt>Phone Number</dt>
+          <dd id="confirmation-phone">—</dd>
+        </div>
+        <div>
+          <dt>Event Type</dt>
+          <dd id="confirmation-event">—</dd>
+        </div>
+        <div>
+          <dt>Guest Count</dt>
+          <dd id="confirmation-guests">—</dd>
+        </div>
+        <div>
+          <dt>Special Requests</dt>
+          <dd id="confirmation-message">—</dd>
+        </div>
+      </dl>
+
+      <p id="review-count" class="review-count">Requests submitted: 0</p>
+      <a href="contact.html" class="back-link">&larr; Submit another request</a>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>&copy; <span id="currentYear"></span> The Artisan Bakehouse & Café</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+
+</html>
