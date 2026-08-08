@@ -1,0 +1,15 @@
+/* Mobile-specific overrides (for screens <= 600px) */
+
+.page-intro,
+.review-form,
+.confirmation-card {
+  padding: 18px;
+}
+
+.checkbox-grid {
+  grid-template-columns: 1fr;
+}
+
+.radio-group {
+  flex-direction: column;
+}
