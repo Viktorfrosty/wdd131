@@ -75,7 +75,6 @@ textarea {
 }
 
 .menu-toggle {
-  display: none;
   background: transparent;
   border: 1px solid var(--border);
   color: var(--text);
@@ -421,23 +420,17 @@ main {
 }
 
 @media (max-width: 600px) {
-  .top-bar {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  .primary-navigation {
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .menu-toggle {
     display: inline-flex;
   }
 
-  .primary-navigation {
-    display: none;
+  .top-bar {
     flex-direction: column;
-    align-items: stretch;
-  }
-
-  .primary-navigation.open {
-    display: flex;
+    align-items: flex-start;
   }
 }
