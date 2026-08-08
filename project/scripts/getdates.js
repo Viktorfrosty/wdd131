@@ -6,7 +6,4 @@ window.addEventListener("DOMContentLoaded", () => {
   const el2 = document.getElementById("currentYear");
   if (el1) el1.textContent = currentYear;
   if (el2) el2.textContent = currentYear;
-
-  const lastModEl = document.getElementById("lastModified");
-  if (lastModEl) lastModEl.textContent = "Last Modification: " + lastModifiedDate;
 });

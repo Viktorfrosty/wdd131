@@ -9,14 +9,16 @@
   <title>Contact Us | The Artisan Bakehouse</title>
   <link rel="stylesheet" href="styles/site.css">
   <script src="scripts/site.js" defer></script>
-  <script src="scripts/getdates.js" defer></script>
   <script src="scripts/form.js" defer></script>
+  <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
   <header class="site-header">
     <div class="top-bar">
-      <a class="logo" href="index.html">The Artisan Bakehouse</a>
+      <a class="logo" href="index.html" aria-label="The Artisan Bakehouse home">
+        <img src="images/logo_bakery.png" alt="The Artisan Bakehouse logo">
+      </a>
       <button class="menu-toggle" id="menu-toggle" aria-expanded="false"
         aria-controls="primary-navigation">Menu</button>
     </div>
@@ -79,7 +81,6 @@
   </main>
   <footer class="site-footer">
     <p>&copy; <span id="currentYear"></span> The Artisan Bakehouse & Café</p>
-    <p id="lastModified"></p>
   </footer>
 </body>
 
